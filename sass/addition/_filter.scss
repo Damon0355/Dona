@@ -1,0 +1,70 @@
+
+
+// ----------------------------------------------------------9-------------------------------------------------
+
+
+select {
+    width: auto !important;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+#new__product__filter {
+    margin: 0;
+    margin-bottom: 40px;
+    h4 {
+        @include font(Inter, 600, 40px, 48px, #141414);
+        padding: 0;
+        margin: 0;
+        margin-left: 8px;
+        margin-bottom: 40px;
+    }
+    .product__box {
+        margin: 0;
+        padding: 0;
+        .card {
+            margin: 8px;
+            a {
+                img {
+                    height: 100%;
+                    border-radius: 8px;
+                }
+            }
+            .card__title {
+                padding: 10px 10px 22px 10px;
+                .card__name {
+                    margin-bottom: 10px;
+                    a {
+                        @include font(Inter, 400, 14px, 18px, #490D2A);
+                    }
+                    .name__icon {
+                        img {
+                            margin-right: 2px;
+                            width: 15px;
+                            height: 15px;
+                        }
+                        .cout {
+                            @include font(Inter, 400, 12px, 18px, #666666);
+                        }
+                    }
+                }
+                .card__shop {
+                    margin: 0 !important;
+                    .shop__title {
+                        @include font(Inter, 500, 17px, 22px, #490D2A);
+                    }
+                    .shop__icon {
+                        a {
+                            width: 22px;
+                            height: 20px;
+                            &:nth-child(1) {
+                                color: #F77F00;
+                                margin-right: 4px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

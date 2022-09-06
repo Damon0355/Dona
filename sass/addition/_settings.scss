@@ -1,0 +1,174 @@
+
+
+// -----------------------------------------------10-----------------------------------
+
+
+.settings__img {
+    column-gap: 25px;
+    margin-bottom: 28px;
+    .s__i__img {
+        width: 118px;
+        height: 118px;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+        border-radius: 50%;
+        position: relative;
+        cursor: pointer;        
+        &::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 50%;
+            background-color: rgb(67, 67, 67);
+            opacity: .7;
+            z-index: 5;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+        .s__images__icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            color: #fff;
+            z-index: 6;
+            font-size: 20px;
+        }
+    }
+    .s__i__down {
+        .s__i__title {
+            @include font('Poppins', 500, 20px, 24px, #001E22);
+            margin-bottom: 10px;
+        }
+        .s__i__add {
+            background: #F77F00;
+            border-radius: 10px;
+            padding: 6px 30px;
+            @include font(Inter, 500, 23px, 28px, #fff);
+        }
+    }
+}
+.settings__contact {
+    row-gap: 35px;
+    .settings__form {
+        display: grid;
+        grid-template: auto / repeat(2, 1fr);
+        grid-gap: 80px;
+        .s__form__left {
+            row-gap: 28px;
+            .s__form__item {
+                label {
+                    width: 180px;
+                    margin-right: 10px;
+                    @include font(Inter, 400, 16px, 28px, #7C797C);
+                }
+                input {
+                    width: 100%;
+                    padding: 6px 15px;
+                    outline: none;
+                    background: #FFFFFF;
+                    border: 1px solid rgba(0, 30, 34, 0.5);
+                    border-radius: 8px;
+                    @include font(Inter, 400, 16px, 28px, #001E22);
+                }
+            }
+        }
+        .s__form__right {
+            @extend .s__form__left;
+            select {
+                width: 100% !important;
+                margin: 0 !important;
+                padding: 6px 15px;
+                outline: none;
+                background: #FFFFFF;
+                border: 1px solid rgba(0, 30, 34, 0.5);
+                border-radius: 8px;
+                @include font(Inter, 400, 16px, 28px, #001E22);  
+            }
+        }
+    }
+    .s__i__submit {
+        .s__i__buttun {
+            border: none;
+            background: #F77F00;
+            border-radius: 10px;
+            padding: 6px 30px;
+            @include font(Inter, 500, 23px, 28px, #FCF6F6);
+        }
+    }
+}
+
+// --------------------------------------------media---------------------------------------
+
+@media screen and (max-width: 991px) {
+    .settings__img {
+        margin-bottom: 35px;
+    }
+    .settings__contact {
+        .settings__form {
+            display: grid;
+            grid-template: auto / repeat(1, 1fr);
+            grid-gap: 28px;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .settings__img {
+        column-gap: 17px;
+        margin-bottom: 22px;
+        .s__i__img {
+            width: 81px;
+            height: 81px;
+        }
+        .s__i__down {
+            .s__i__title {
+                @include font('Poppins', 500, 18px, 24px, #001E22);
+            }
+            .s__i__add {
+                padding: 9px 20px;
+                @include font(Inter, 500, 19px, 23px, #fff);
+            }
+        }
+    }
+    .settings__contact {
+        row-gap: 20px;
+        .settings__form {
+            grid-gap: 20px;
+            .s__form__left {
+                row-gap: 20px;
+                .s__form__item {
+                    label {
+                        width: auto !important;
+                        margin: 0 0 5px 0 !important;
+                    }
+                    input {
+                        padding: 8px 15px;
+                    }
+                }
+            }
+            .s__form__right {
+                select {
+                    padding: 8px 15px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .settings__img {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 17px;
+        .s__i__img {
+            width: 100px;
+            height: 100px;
+        }
+    }
+}

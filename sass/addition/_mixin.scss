@@ -1,0 +1,15 @@
+
+
+@mixin button($border, $bg, $b__r) {
+    border: 1px solid $border;
+    background-color: $bg;
+    border-radius: $b__r;
+}
+@mixin font($family, $weight, $size, $height, $color) {
+    font-family: $family;
+    font-style: normal;
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $height;
+    color: $color;
+}

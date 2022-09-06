@@ -1,0 +1,122 @@
+
+
+// ---------------------------------------------------8---------------------------------------------------
+
+
+.application {
+    .application__fluit {
+        padding: 30px 60px 70px;
+        background: #FFFFFF;
+        box-shadow: 0px 1px 5px rgba(208, 208, 208, 0.15);
+        border-radius: 25px;
+        .application__img {
+            width: auto !important;
+            margin-bottom: 20px;
+        }
+        .application__title {
+            @include font(Inter, 500, 35px, 42px, #141414);
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .application__subtitle {
+            @include font(Inter, 400, 25px, 30px, #141414);
+            text-align: center;
+            margin-bottom: 45px;
+        }
+        .application__sent {
+            width: 100%;
+            div {
+                display: grid;
+                grid-template: auto / repeat(2, 1fr);
+                grid-gap: 20px;
+                padding: 13px;
+                border-top: 1px solid #000;
+                &:nth-child(1) {
+                    p {
+                        @include font(Inter, 500, 27px, 33px, #000);
+                    }
+                }
+                &:nth-child(2) {
+                    p {
+                        @include font(Inter, 400, 25px, 30px, #000);
+                    }
+                }
+                &:nth-child(3) {
+                    p {
+                        @include font(Inter, 500, 27px, 33px, #000);
+                    }
+                }
+                p {
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+        }
+    }
+}
+
+// -----------------------------------media-----------------------------
+
+@media screen and (max-width:991px) {
+    .application {
+        .application__fluit {
+            padding: 30px 30px 40px;
+            .application__title {
+                @include font(Inter, 500, 33px, 40px, #141414);
+                margin-bottom: 12px;
+            }
+            .application__subtitle {
+                @include font(Inter, 400, 23px, 38px, #141414);
+                margin-bottom: 40px;
+            }
+            .application__sent {
+                div {
+                    &:nth-child(3) {
+                        display: flex !important;
+                        justify-content: end;
+                        p {
+                            @include font(Inter, 500, 27px, 33px, #000);
+                            &:nth-child(1) {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:767px) {
+    .application {
+        .application__fluit {
+            padding: 20px 10px 30px;
+            .application__title {
+                @include font(Inter, 500, 25px, 30px, #141414);
+                margin-bottom: 10px;
+            }
+            .application__subtitle {
+                @include font(Inter, 400, 16px, 19px, #141414);
+            }
+            .application__sent {
+                div {
+                    grid-gap: 10px;
+                    &:nth-child(1) {
+                        p {
+                            @include font(Inter, 500, 20px, 24px, #000);
+                        }
+                    }
+                    &:nth-child(2) {
+                        p {
+                            @include font(Inter, 400, 18px, 22px, #000);
+                        }
+                    }
+                    &:nth-child(3) {
+                        p {
+                            @include font(Inter, 500, 20px, 24px, #000);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

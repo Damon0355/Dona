@@ -1,0 +1,74 @@
+.history__box__fluit {
+    .history__number {
+        background: #FFFFFF;
+        box-shadow: 0px 2px 10px rgba(186, 186, 186, 0.25);
+        border-radius: 5px 5px 0 0;
+        padding: 20px 28px;
+        border-bottom: 1px solid rgba(102, 102, 102, 0.8);
+        .his__num__title {
+            margin: 0;
+            @include font('Inter', 400, 20px, 100%, #141414);
+        }
+    }
+    .history__section {
+        background: #FFFFFF;
+        box-shadow: 0px 2px 10px rgba(186, 186, 186, 0.25);
+        padding: 40px 20px 26px 20px;
+        display: grid;
+        grid-template: auto / 3fr 5fr;
+        grid-gap: 26px;
+        .his__sec__item {
+            height: fit-content;
+            padding-right: 10px;
+            border-right: 1px solid rgba(102, 102, 102, 0.8);
+            h5 {
+                margin: 20px 0 10px;
+                @include font('Inter', 400, 14px, 17px, #000);
+            }
+        }
+        .his__sec__statistics {
+            row-gap: 23px;
+            .h__s__s__item {
+                width: 100%;
+                justify-content: space-between;
+                .h__s__item_-subtitle {
+                    margin: 0;
+                    @include font('Inter', 400, 14px, 17px, #666666);
+                }
+                .history__info {
+                    @extend .h__s__item_-subtitle;
+                }
+                .tics {
+                    border-bottom: 1px solid rgba(102, 102, 102, 0.5); 
+                    min-width: 50px;
+                }
+            }
+        }
+    }
+    .his__determination {
+        padding: 21px 20px;            
+        background: #FFFFFF;
+        box-shadow: 0px 2px 10px rgba(186, 186, 186, 0.25);
+        border-radius: 0 0 5px 5px;
+        #history__add {
+            background: #111344;
+            border-radius: 8px;
+            padding: 9px 20px;
+            @include font('Inter', 500, 16px, 100%, #fff);
+            span {
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: #FFFFFF;
+                margin-right: 6px;
+            }
+        }
+        #history__remove {
+            background: #FF0000;
+            border-radius: 8px;
+            padding: 9px 18px;
+            @include font('Inter', 500, 16px, 100%, #fff);
+        }
+    }
+}
